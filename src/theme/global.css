@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600;700;800&family=Jersey+25&display=swap");
+@import "tailwindcss";
+
+:root {
+  --blood: #6f0004;
+  --crimson: #a50413;
+  --red: #db0821;
+  --mustard: #e5ac11;
+  --silver: #bfbfbf;
+  --ink: #1a1919;
+  --night: #0b0606;
+  --ion-font-family: "Inter Tight", system-ui, sans-serif;
+  --ion-background-color: var(--night);
+  --ion-text-color: var(--silver);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app,
+ion-app,
+ion-page,
+ion-content {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--night);
+}
+
+body {
+  min-width: 320px;
+  color: var(--silver);
+  font-family: "Inter Tight", system-ui, sans-serif;
+  overscroll-behavior: none;
+}
+
+ion-content {
+  --background: var(--night);
+  --overflow: hidden;
+}
+
+.portfolio-shell {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--night);
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.stage canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.ui-header {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:
+    calc(18px + env(safe-area-inset-top))
+    calc(26px + env(safe-area-inset-right))
+    18px
+    calc(26px + env(safe-area-inset-left));
+  pointer-events: none;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.ui-header .mark {
+  color: var(--mustard);
+  font-family: "Jersey 25", Anton, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.ui-header .mark span {
+  color: var(--red);
+}
+
+.ui-header a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--silver);
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.ui-header a i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 10px var(--red);
+}
+
+.ui-nav {
+  position: absolute;
+  z-index: 3;
+  bottom: calc(22px + env(safe-area-inset-bottom));
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 10px 12px;
+  border: 1px solid rgb(219 8 33 / 35%);
+  background: rgb(26 25 25 / 72%);
+  box-shadow: 0 12px 35px rgb(0 0 0 / 25%);
+  transform: translateX(-50%);
+  backdrop-filter: blur(10px);
+}
+
+.ui-nav button {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgb(191 191 191 / 25%);
+  border-radius: 0;
+  background: transparent;
+  color: var(--mustard);
+  cursor: pointer;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    color 180ms ease,
+    opacity 180ms ease;
+}
+
+.ui-nav button:hover:not(:disabled),
+.ui-nav button:focus-visible:not(:disabled) {
+  border-color: var(--red);
+  outline: none;
+  background: var(--red);
+  color: #000;
+}
+
+.ui-nav button:disabled {
+  cursor: default;
+  opacity: 0.25;
+}
+
+.ui-nav svg {
+  width: 22px;
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: square;
+  stroke-width: 1.6;
+}
+
+.ui-nav .label {
+  min-width: 190px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ui-nav .label b {
+  display: block;
+  color: var(--silver);
+  font-family: "Jersey 25", Anton, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+}
+
+.ui-nav .label small {
+  color: var(--red);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.ui-nav .dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.ui-nav .dots i {
+  width: 14px;
+  height: 2px;
+  background: rgb(191 191 191 / 25%);
+  transition:
+    width 300ms ease,
+    background 300ms ease;
+}
+
+.ui-nav .dots i.on {
+  width: 26px;
+  background: var(--mustard);
+}
+
+.ui-hint {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(100px + env(safe-area-inset-bottom));
+  left: 50%;
+  color: rgb(229 172 17 / 80%);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  pointer-events: none;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  animation: pulse 2.4s infinite;
+}
+
+.ui-loading {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--night);
+  color: var(--red);
+  font-family: "Jersey 25", Anton, sans-serif;
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.hint-enter-active,
+.hint-leave-active,
+.loading-leave-active {
+  transition: opacity 600ms ease;
+}
+
+.hint-enter-from,
+.hint-leave-to,
+.loading-leave-to {
+  opacity: 0;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 640px) {
+  .ui-header {
+    padding-right: calc(18px + env(safe-area-inset-right));
+    padding-left: calc(18px + env(safe-area-inset-left));
+  }
+
+  .ui-header .edition {
+    display: none;
+  }
+
+  .ui-header a {
+    font-size: 9px;
+  }
+
+  .ui-nav {
+    width: calc(100% - 28px - env(safe-area-inset-left) - env(safe-area-inset-right));
+    max-width: 370px;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .ui-nav .label {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .ui-nav .label b {
+    font-size: 18px;
+  }
+
+  .ui-nav .label small {
+    font-size: 8px;
+  }
+
+  .ui-nav .dots {
+    gap: 4px;
+  }
+
+  .ui-nav .dots i {
+    width: 9px;
+  }
+
+  .ui-nav .dots i.on {
+    width: 18px;
+  }
+
+  .ui-hint {
+    width: calc(100% - 40px);
+    letter-spacing: 0.2em;
+  }
+}
+
+@media (max-height: 540px) {
+  .ui-header {
+    padding-top: calc(10px + env(safe-area-inset-top));
+    padding-bottom: 10px;
+  }
+
+  .ui-nav {
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    padding: 6px 8px;
+  }
+
+  .ui-nav button {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .ui-hint {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ui-hint {
+    animation: none;
+  }
+}

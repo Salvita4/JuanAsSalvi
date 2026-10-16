@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#1a1919"/>
+  <text x="3" y="47" fill="#e5ac11" font-family="Impact, sans-serif" font-size="34" letter-spacing="-1">JS<tspan fill="#db0821">B</tspan></text>
+  <circle cx="59" cy="48" r="3" fill="#db0821"/>
+</svg>

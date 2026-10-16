@@ -1,0 +1,136 @@
+{
+  "site": {
+    "mark": "JSB.",
+    "owner": "Juan Salvador Barbera",
+    "manifesto": "Juan As Salvi",
+    "headerTitle": "Juan As Salvi · Vol. 01",
+    "volume": "VOL. 01",
+    "editionYear": "2026",
+    "email": "jsbarbera4@gmail.com",
+    "status": "Disponible"
+  },
+  "navigation": [
+    { "label": "Portada", "sub": "Revista cerrada" },
+    { "label": "Sobre mí", "sub": "Pliego 01" },
+    { "label": "MOOCount", "sub": "Proyecto 01" },
+    { "label": "RECapp", "sub": "Proyecto 02" },
+    { "label": "Arte&Ingeniería", "sub": "$whoami" },
+    { "label": "Skills / Contacto", "sub": "Pliego final" }
+  ],
+  "cover": {
+    "displayFont": "Jersey 25",
+    "portrait": "portada.jpg",
+    "imageTreatment": {
+      "tint": "red",
+      "tintOpacity": 0.3,
+      "grayscale": 0.05,
+      "contrast": 1.25
+    },
+    "kicker": "MI",
+    "title": "PORTFOLIO",
+    "subtitle": "Juan As Salvi",
+    "description": "Ingeniería en Sistemas de Información. Creatividad. Diseño. Soluciones que dan valor.",
+    "barcode": {
+      "right": 60,
+      "bottom": 150,
+      "width": 160,
+      "height": 90
+    },
+    "pageHint": "ABRIR PARA EXPLORAR  →",
+    "screenHint": "Tocá la revista para abrirla"
+  },
+  "about": {
+    "displayFont": "Jersey 25",
+    "portrait": "foto1.jpeg",
+    "imageTreatment": {
+      "tint": "red",
+      "tintOpacity": 0.1,
+      "grayscale": 0.05,
+      "contrast": 1.05
+    },
+    "eyebrow": "SOBRE MÍ / 01",
+    "greeting": "HOLA,",
+    "headline": "SOY SALVA, PENSADOR E IMAGINADOR INCANSABLE Y ME ENCANTA CREAR.",
+    "body": "Actualmente estoy terminando mi carrera en Ingeniería en Sistemas de Información. Mi camino en ella se caracteriza por la curiosidad, el deseo de aprender y la enseñanza.",
+    "highlight": "Cada cosa que hago, la hago desde la curiosidad y el deseo de aprender. Me gusta explorar, probar y equivocarme. Y siempre busco que lo que hago tenga un impacto positivo en las personas."
+  },
+  "contents": {
+    "displayFont": "Jersey 25",
+    "eyebrow": "ÍNDICE",
+    "titleLines": ["CONTE", "NIDOS"],
+    "items": [
+      { "page": "04", "title": "MOOCount", "category": "Producto" },
+      { "page": "06", "title": "RECapp", "category": "Tesis -Producto" },
+      { "page": "08", "title": "Arte&Ingeniería", "category": "$whoami" },
+      { "page": "10", "title": "SKILLS", "category": "Contacto" }
+    ]
+  },
+  "projects": [
+    {
+      "displayFont": "Jersey 25",
+      "number": "01",
+      "title": "MOOCount",
+      "subtitle": "Sistema de identidad",
+      "year": "2024",
+      "services": "Estrategia · Identidad · Dirección",
+      "image": "https://images.unsplash.com/photo-1617050318658-a9a3175e34cb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1400",
+      "description": "Una identidad flexible para una marca que transforma ideas en objetos cotidianos. Construimos un lenguaje visual directo, modular y reconocible.",
+      "role": "Director creativo",
+      "discipline": "Diseño visual",
+      "theme": { "background": "red", "ink": "black" }
+    },
+    {
+      "displayFont": "Jersey 25",
+      "number": "02",
+      "title": "MATERIA",
+      "subtitle": "Editorial & digital",
+      "year": "2023",
+      "services": "Concepto · Editorial · Web",
+      "image": "https://images.unsplash.com/photo-1790345835845-663c1d9afd4e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1400",
+      "description": "Una publicación que investiga cómo el diseño se vuelve cultura. Ritmo, tipografía y archivo conviven en un sistema editorial vivo.",
+      "role": "Director creativo",
+      "discipline": "Diseño visual",
+      "theme": { "background": "mustard", "ink": "blood" }
+    },
+    {
+      "displayFont": "Jersey 25",
+      "number": "03",
+      "title": "NEXO",
+      "subtitle": "Experiencia de marca",
+      "year": "2024",
+      "services": "Dirección de arte · Campaña",
+      "image": "https://images.unsplash.com/photo-1637088059531-4ffcc89d0dd3?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=1400",
+      "description": "Una campaña visual sobre los encuentros inesperados en la ciudad. Imagen, movimiento y una voz editorial construyen un relato común.",
+      "role": "Director creativo",
+      "discipline": "Diseño visual",
+      "theme": { "background": "crimson", "ink": "mustard" }
+    }
+  ],
+  "skills": {
+    "displayFont": "Jersey 25",
+    "eyebrow": "CAPABILITIES / 06",
+    "title": "SKILLS",
+    "items": [
+      "Dirección creativa",
+      "Identidad visual",
+      "Diseño editorial",
+      "Diseño digital",
+      "Estrategia",
+      "Motion"
+    ]
+  },
+  "contact": {
+    "displayFont": "Jersey 25",
+    "eyebrow": "CONTACTO",
+    "badge": "360°",
+    "headlineLines": ["¿CREAMOS", "ALGO", "JUNTOS?"],
+    "emailDisplay": "JSBARBERA4@GMAIL.COM",
+    "location": "Córdoba, Argentina",
+    "availability": "Disponible para proyectos 2026"
+  },
+  "backCover": {
+    "displayFont": "Jersey 25",
+    "mark": "JS.",
+    "tagline": "THE PORTFOLIO MANIFESTO"
+  }
+}
